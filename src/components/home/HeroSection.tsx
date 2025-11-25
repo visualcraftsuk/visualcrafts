@@ -106,7 +106,7 @@ export default function HeroSection() {
             </div>
 
             {/* Floating Cards */}
-            <motion.div
+{/*             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
@@ -134,7 +134,7 @@ export default function HeroSection() {
                 <div className="text-sm text-gray-600">Team Members</div>
                 <div className="text-xl">25+</div>
               </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Background Decoration */}
             <div className="absolute inset-0 bg-gradient-to-br from-purple-200 to-pink-200 rounded-2xl transform rotate-6 -z-10 opacity-20"></div>
