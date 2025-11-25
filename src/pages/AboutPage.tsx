@@ -85,7 +85,7 @@ export default function AboutPage() {
             <h1 className="text-4xl lg:text-6xl mb-6">
               About{' '}
               <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                CreativeHub
+                VisualCrafts
               </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -151,7 +151,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 text-gray-600 leading-relaxed">
                 <p>
-                  Founded in 2018, CreativeHub started with a simple mission: to help businesses tell
+                  Founded in 2018, VisualCrafts started with a simple mission: to help businesses tell
                   their stories through compelling design and strategic marketing. What began as a small
                   team of three passionate designers has grown into a full-service creative agency with
                   over 25 talented professionals.
@@ -175,7 +175,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -219,7 +219,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Choose Us */}
       <section className="py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-white">

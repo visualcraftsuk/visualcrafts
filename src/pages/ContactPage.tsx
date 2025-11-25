@@ -68,7 +68,7 @@ export default function ContactPage() {
   };
 
   const openWhatsApp = () => {
-    window.open('https://wa.me/15551234567', '_blank');
+    window.open('https://wa.me/7385312319', '_blank');
   };
 
   return (
@@ -98,7 +98,7 @@ export default function ContactPage() {
       {/* Contact Info Cards */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-6 -mt-12">
+          <div className="grid md:grid-cols-2 gap-6 -mt-12">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -110,8 +110,8 @@ export default function ContactPage() {
                     <Phone size={24} />
                   </div>
                   <h3 className="text-xl mb-2">Call Us</h3>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
-                  <p className="text-gray-600">Mon-Fri, 9am-6pm EST</p>
+                  <p className="text-gray-600">+44 7385312319</p>
+                  <p className="text-gray-600">Mon-Fri, 9am-5pm EST</p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -127,13 +127,13 @@ export default function ContactPage() {
                     <Mail size={24} />
                   </div>
                   <h3 className="text-xl mb-2">Email Us</h3>
-                  <p className="text-gray-600">hello@creativehub.com</p>
+                  <p className="text-gray-600">visualcrafts.uk@gmail.com</p>
                   <p className="text-gray-600">We reply within 24 hours</p>
                 </CardContent>
               </Card>
             </motion.div>
 
-            <motion.div
+{/*             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -148,7 +148,7 @@ export default function ContactPage() {
                   <p className="text-gray-600">Design City, DC 12345</p>
                 </CardContent>
               </Card>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </section>
@@ -218,7 +218,7 @@ export default function ContactPage() {
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          placeholder="+1 (555) 123-4567"
+                          placeholder="+44 7890123456"
                         />
                       </div>
 
@@ -362,7 +362,7 @@ export default function ContactPage() {
                   <div className="space-y-2 text-gray-600">
                     <div className="flex justify-between">
                       <span>Monday - Friday:</span>
-                      <span>9:00 AM - 6:00 PM</span>
+                      <span>9:00 AM - 5:00 PM</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Saturday:</span>
@@ -377,7 +377,7 @@ export default function ContactPage() {
               </Card>
 
               {/* FAQ Quick Links */}
-              <Card>
+{/*               <Card>
                 <CardHeader>
                   <CardTitle>Quick Links</CardTitle>
                 </CardHeader>
@@ -405,14 +405,14 @@ export default function ContactPage() {
                     </li>
                   </ul>
                 </CardContent>
-              </Card>
+              </Card> */}
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Map Section (Placeholder) */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -429,7 +429,7 @@ export default function ContactPage() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

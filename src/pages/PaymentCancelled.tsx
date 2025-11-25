@@ -116,18 +116,18 @@ export default function PaymentCancelled() {
             <h4 className="mb-4">Need Assistance?</h4>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:hello@creativehub.com"
+                href="mailto:visualcrafts.uk@gmail.com"
                 className="flex items-center gap-2 text-purple-600 hover:underline"
               >
                 <Mail size={18} />
-                <span>hello@creativehub.com</span>
+                <span>visualcrafts.uk@gmail.com</span>
               </a>
               <a
-                href="tel:+15551234567"
+                href="tel:+447385312319"
                 className="flex items-center gap-2 text-purple-600 hover:underline"
               >
                 <Phone size={18} />
-                <span>+1 (555) 123-4567</span>
+                <span>+44 7385312319</span>
               </a>
             </div>
           </motion.div>

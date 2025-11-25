@@ -27,7 +27,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { path: '/about', label: 'About Us' },
     { path: '/services', label: 'Services' },
     { path: '/portfolio', label: 'Portfolio' },
-    { path: '/pricing', label: 'Pricing' },
+    // { path: '/pricing', label: 'Pricing' },
     { path: '/contact', label: 'Contact' },
   ];
 
@@ -43,11 +43,21 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2">
-              <motion.div
+{/*               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg"
               >
-                <span className="text-xl">CreativeHub</span>
+                <span className="text-xl">VisualCraftsIShere</span>
+              </motion.div> */}
+              <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-gradient-to-r from-white-600 to-white-600 text-white px-4 py-2 rounded-lg flex items-center justify-center"
+              >
+                <img
+                src={`${import.meta.env.BASE_URL}visual-crafts.png`}     // ← replace with your image path
+                alt="VisualCrafts Logo"
+                className="h-10 w-auto"   // ← adjust size as needed
+                />
               </motion.div>
             </Link>
 
@@ -124,7 +134,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             {/* Company Info */}
             <div>
               <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg inline-block mb-4">
-                <span className="text-xl">CreativeHub</span>
+                <span className="text-xl">VisualCrafts</span>
               </div>
               <p className="text-gray-400 mb-4">
                 Your trusted partner for all social media marketing and creative design needs.
@@ -197,24 +207,24 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div>
               <h3 className="text-lg mb-4">Contact Us</h3>
               <ul className="space-y-3 text-gray-400">
-                <li className="flex items-start gap-2">
+{/*                 <li className="flex items-start gap-2">
                   <MapPin size={20} className="flex-shrink-0 mt-1" />
                   <span>123 Creative Street, Design City, DC 12345</span>
-                </li>
+                </li> */}
                 <li className="flex items-center gap-2">
                   <Phone size={20} />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+44 7385312319</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Mail size={20} />
-                  <span>hello@creativehub.com</span>
+                  <span>visualcrafts.uk@gmail.com</span>
                 </li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; {new Date().getFullYear()} CreativeHub. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} VisualCrafts. All rights reserved.</p>
           </div>
         </div>
       </footer>

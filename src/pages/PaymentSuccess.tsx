@@ -40,7 +40,7 @@ export default function PaymentSuccess() {
           >
             <h1 className="text-4xl mb-4">Payment Successful!</h1>
             <p className="text-xl text-gray-600 mb-8">
-              Thank you for choosing CreativeHub. Your payment has been processed successfully.
+              Thank you for choosing VisualCrafts. Your payment has been processed successfully.
             </p>
           </motion.div>
 
@@ -124,12 +124,12 @@ export default function PaymentSuccess() {
             className="text-sm text-gray-500 mt-8"
           >
             Need help? Contact us at{' '}
-            <a href="mailto:hello@creativehub.com" className="text-purple-600 hover:underline">
-              hello@creativehub.com
+            <a href="mailto:visualcrafts.uk@gmail.com" className="text-purple-600 hover:underline">
+              visualcrafts.uk@gmail.com
             </a>{' '}
             or call{' '}
-            <a href="tel:+15551234567" className="text-purple-600 hover:underline">
-              +1 (555) 123-4567
+            <a href="tel:+447385312319" className="text-purple-600 hover:underline">
+              +44 7385312319
             </a>
           </motion.p>
         </div>

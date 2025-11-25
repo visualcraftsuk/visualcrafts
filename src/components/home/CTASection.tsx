@@ -54,7 +54,6 @@ export default function CTASection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white/10"
               >
                 View Our Work
               </Button>

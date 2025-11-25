@@ -324,11 +324,11 @@ export default function ServicesPage() {
                 Send Inquiry
               </Button>
             </Link>
-            <Link to="/pricing">
+{/*             <Link to="/pricing">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                 View Pricing
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

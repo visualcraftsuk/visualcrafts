@@ -63,7 +63,7 @@ export default function HeroSection() {
                 transition={{ delay: 0.4 }}
               >
                 <div className="text-3xl bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                  500+
+                  150+
                 </div>
                 <div className="text-gray-600 text-sm">Projects Completed</div>
               </motion.div>
@@ -73,7 +73,7 @@ export default function HeroSection() {
                 transition={{ delay: 0.5 }}
               >
                 <div className="text-3xl bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                  200+
+                  70+
                 </div>
                 <div className="text-gray-600 text-sm">Happy Clients</div>
               </motion.div>

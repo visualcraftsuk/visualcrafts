@@ -8,7 +8,7 @@ export default function TestimonialsSection() {
       name: 'Sarah Johnson',
       role: 'CEO, TechStart Inc.',
       content:
-        'CreativeHub transformed our brand identity completely. Their attention to detail and creative vision exceeded our expectations. Highly recommended!',
+        'VisualCrafts transformed our brand identity completely. Their attention to detail and creative vision exceeded our expectations. Highly recommended!',
       rating: 5,
       avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150',
     },

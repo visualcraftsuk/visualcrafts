@@ -41,7 +41,7 @@ export default function AboutPreview() {
           <h2 className="text-3xl lg:text-5xl mb-4">
             About{' '}
             <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              CreativeHub
+              VisualCrafts
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
