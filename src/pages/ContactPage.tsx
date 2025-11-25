@@ -12,7 +12,8 @@ import {
   SelectValue,
 } from '../components/ui/select';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import { Mail, Phone, MapPin, Send, MessageSquare, Upload, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, MessageSquare, Upload, CheckCircle2, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -38,27 +39,39 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    console.log('Form submitted:', { ...formData, file: selectedFile?.name });
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      phone: formData.phone,
+      service: formData.service,
+      message: formData.message,
+      file_name: selectedFile?.name || 'No file attached',
+    };
 
-    // In a real implementation, this would send data to your backend
-    setTimeout(() => {
+    try {
+      await emailjs.send(
+        'service_mv3x6hl',    // replace with your EmailJS service ID
+        'template_efwlwkq',   // replace with your EmailJS template ID
+        templateParams,
+        'BH_kUegE_U5EC7Gg8'     // replace with your EmailJS public key
+      );
+
       setIsSubmitted(true);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: '',
+      });
+      setSelectedFile(null);
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      alert('Failed to send the inquiry. Please try again later.');
+    } finally {
       setIsSubmitting(false);
-
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          service: '',
-          message: '',
-        });
-        setSelectedFile(null);
-      }, 3000);
-    }, 1500);
+      setTimeout(() => setIsSubmitted(false), 3000);
+    }
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -132,23 +145,6 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
             </motion.div>
-
-{/*             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <Card className="shadow-xl hover:shadow-2xl transition-shadow">
-                <CardContent className="pt-6">
-                  <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-3 rounded-lg w-fit mb-4">
-                    <MapPin size={24} />
-                  </div>
-                  <h3 className="text-xl mb-2">Visit Us</h3>
-                  <p className="text-gray-600">123 Creative Street</p>
-                  <p className="text-gray-600">Design City, DC 12345</p>
-                </CardContent>
-              </Card>
-            </motion.div> */}
           </div>
         </div>
       </section>
@@ -254,7 +250,7 @@ export default function ContactPage() {
                         />
                       </div>
 
-                      <div className="space-y-2">
+{/*                       <div className="space-y-2">
                         <Label htmlFor="file">Attach File (Optional)</Label>
                         <div className="flex items-center gap-4">
                           <Input
@@ -278,14 +274,7 @@ export default function ContactPage() {
                         <p className="text-xs text-gray-500">
                           Supported formats: PDF, DOC, DOCX, JPG, PNG (Max 10MB)
                         </p>
-                      </div>
-
-                      <div className="bg-purple-50 p-4 rounded-lg">
-                        <p className="text-sm text-gray-600">
-                          <strong>Note:</strong> This is a demo form. In production, form submissions
-                          would be sent to your backend with auto-response email functionality.
-                        </p>
-                      </div>
+                      </div> */}
 
                       <Button
                         type="submit"
@@ -375,61 +364,10 @@ export default function ContactPage() {
                   </div>
                 </CardContent>
               </Card>
-
-              {/* FAQ Quick Links */}
-{/*               <Card>
-                <CardHeader>
-                  <CardTitle>Quick Links</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    <li>
-                      <a href="#" className="text-purple-600 hover:underline">
-                        View Our Portfolio
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="text-purple-600 hover:underline">
-                        Pricing & Packages
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="text-purple-600 hover:underline">
-                        Frequently Asked Questions
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="text-purple-600 hover:underline">
-                        Client Testimonials
-                      </a>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card> */}
             </motion.div>
           </div>
         </div>
       </section>
-
-      {/* Map Section (Placeholder) */}
-      {/* <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="bg-gray-200 rounded-2xl h-96 flex items-center justify-center">
-              <div className="text-center text-gray-600">
-                <MapPin size={48} className="mx-auto mb-4" />
-                <p className="text-xl">Interactive Map Placeholder</p>
-                <p className="text-sm">Integrate Google Maps or Mapbox here</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section> */}
     </div>
   );
 }
