@@ -5,7 +5,7 @@
 
   export default defineConfig({
     plugins: [react()],
-    base: '/visualcrafts/', // <--- THIS IS CRITICAL
+    base: '/', // <--- THIS IS CRITICAL
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
