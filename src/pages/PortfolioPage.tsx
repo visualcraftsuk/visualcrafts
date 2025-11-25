@@ -76,7 +76,7 @@ export default function PortfolioPage() {
     },
     {
       id: 10,
-      title: 'Event Cratives',
+      title: 'Event Creatives',
       category: 'Social Media',
       image: 'images/social3.png?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2NpYWwlMjBtZWRpYSUyMGRlc2lnbnxlbnwxfHx8fDE3NjM4MjQ4MzF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
       description: 'Event creatives for food outlet',
