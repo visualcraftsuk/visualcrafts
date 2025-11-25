@@ -151,10 +151,9 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 text-gray-600 leading-relaxed">
                 <p>
-                  Founded in 2018, VisualCrafts started with a simple mission: to help businesses tell
-                  their stories through compelling design and strategic marketing. What began as a small
-                  team of three passionate designers has grown into a full-service creative agency with
-                  over 25 talented professionals.
+                  Founded in 2021, VisualCrafts started with a simple mission: to help businesses tell
+                  their stories through compelling design and strategic marketing. What began as a passion
+                  has grown into a full-service creative agency with talented professionals.
                 </p>
                 <p>
                   Over the years, we've had the privilege of working with startups, established brands,
